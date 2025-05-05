@@ -1,0 +1,336 @@
+.mental-health-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.assessment-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.assessment-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.assessment-header p {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.assessment-form {
+    background: var(--card-background-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.symptoms-list {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.symptom-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--background-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.symptom-item:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.symptom-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.symptom-item label {
+    flex: 1;
+    cursor: pointer;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.submit-assessment-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-assessment-btn:hover {
+    background: var(--secondary-color);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--card-background-color);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+}
+
+.modal-content h2 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.modal-content h3 {
+    color: var(--text-color);
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.modal-content h4 {
+    color: var(--text-color);
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.modal-content p {
+    color: var(--text-color);
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+#assessmentResults {
+    color: var(--text-color);
+    margin: 20px 0;
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: 4px;
+}
+
+.recommendations {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: 4px;
+}
+
+.emergency-contact {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    border-left: 4px solid #ff4444;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.close-modal:hover {
+    color: var(--primary-color);
+}
+
+/* Dark theme specific styles */
+body.dark-theme .modal-content {
+    background-color: var(--card-background-color);
+    color: var(--text-color);
+}
+
+body.dark-theme .modal-content h2,
+body.dark-theme .modal-content h3,
+body.dark-theme .modal-content h4,
+body.dark-theme .modal-content p {
+    color: var(--text-color);
+}
+
+body.dark-theme #assessmentResults,
+body.dark-theme .recommendations,
+body.dark-theme .emergency-contact {
+    background-color: var(--card-background-color);
+    color: var(--text-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Light theme specific styles */
+body:not(.dark-theme) .modal-content {
+    background-color: var(--card-background-color);
+    color: var(--text-color);
+}
+
+body:not(.dark-theme) .modal-content h2,
+body:not(.dark-theme) .modal-content h3,
+body:not(.dark-theme) .modal-content h4,
+body:not(.dark-theme) .modal-content p {
+    color: var(--text-color);
+}
+
+body:not(.dark-theme) #assessmentResults,
+body:not(.dark-theme) .recommendations,
+body:not(.dark-theme) .emergency-contact {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.results-summary, .treatment-plan {
+    max-width: 900px;
+    margin: 3vh auto 3vh auto;
+    padding: 2.5rem 2rem;
+    background: #23242a;
+    border-radius: 32px 32px 32px 8px;
+    box-shadow: 0 8px 40px 0 rgba(0,0,0,0.25), 0 1.5px 8px 0 rgba(74,144,226,0.10);
+    max-height: 90vh;
+    min-height: 250px;
+    overflow-y: auto !important;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) #eee;
+    border: 2.5px solid var(--primary-color);
+    position: relative;
+    animation: bubbleIn 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+@keyframes bubbleIn {
+    0% { transform: scale(0.8) translateY(60px); opacity: 0; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.results-summary::-webkit-scrollbar, .treatment-plan::-webkit-scrollbar {
+    width: 8px;
+    background: #eee;
+}
+.results-summary::-webkit-scrollbar-thumb, .treatment-plan::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 8px;
+}
+
+.result-item {
+    background: var(--card-background-color);
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.result-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.result-item p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.symptom-match {
+    background: rgba(var(--primary-color-rgb), 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.symptom-match span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.treatment-plan h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+.treatment-module h4 {
+    color: var(--secondary-color);
+    font-size: 1.15rem;
+    margin-bottom: 0.7rem;
+}
+.treatment-module ul {
+    margin-bottom: 1.2rem;
+    padding-right: 1.2rem;
+}
+.treatment-module li {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mental-health-container {
+        margin: 1rem auto;
+    }
+
+    .assessment-form {
+        padding: 1rem;
+    }
+
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .symptom-item {
+        padding: 0.8rem;
+    }
+
+    .results-summary, .treatment-plan {
+        padding: 1.2rem 0.5rem;
+    }
+    .result-item {
+        padding: 1.2rem 0.5rem;
+        font-size: 1rem;
+    }
+    .treatment-plan h3 {
+        font-size: 1.1rem;
+    }
+    .treatment-module h4 {
+        font-size: 1rem;
+    }
+}
+
+.results-summary,
+.result-item,
+.results-summary *,
+.result-item * {
+    color: #fff !important;
+}
+
+.result-item,
+.treatment-plan,
+.treatment-module {
+    text-align: left !important;
+} 

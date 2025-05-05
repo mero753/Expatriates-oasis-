@@ -1,0 +1,323 @@
+.stories-container {
+    padding: 120px 20px 60px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--background-color) 0%, #f0f4f8 100%);
+}
+
+.stories-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.stories-header h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stories-header p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.story-card {
+    background: var(--card-background-color);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.story-header {
+    padding: 25px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+}
+
+.story-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.story-country {
+    font-size: 1rem;
+    opacity: 0.9;
+    display: block;
+}
+
+.story-content {
+    padding: 25px;
+}
+
+.story-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.story-content strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.story-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.story-link:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark theme adjustments */
+body.dark-theme .stories-container {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+body.dark-theme .story-card {
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .story-content p {
+    color: #f0f0f0;
+}
+
+body.dark-theme .story-content strong {
+    color: var(--accent-color);
+}
+
+body.dark-theme .story-link {
+    background: var(--accent-color);
+}
+
+body.dark-theme .story-link:hover {
+    background: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stories-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .story-card {
+        margin: 0 10px;
+    }
+}
+
+/* Add Story Button */
+.add-story-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.add-story-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.add-story-btn i {
+    font-size: 1.2rem;
+}
+
+/* Story Form */
+.story-form {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background: var(--card-background-color);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.story-form .form-group {
+    margin-bottom: 20px;
+}
+
+.story-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.story-form input,
+.story-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--input-border);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.story-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.story-form input:focus,
+.story-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.1);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.submit-btn,
+.cancel-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.cancel-btn {
+    background: #e0e0e0;
+    color: var(--text-color);
+}
+
+.submit-btn:hover,
+.cancel-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover {
+    background: var(--secondary-color);
+}
+
+.cancel-btn:hover {
+    background: #d0d0d0;
+}
+
+/* Delete Story Button */
+.delete-story-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.story-card:hover .delete-story-btn {
+    opacity: 1;
+}
+
+.delete-story-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Dark theme adjustments */
+body.dark-theme .story-form {
+    background: rgba(30, 30, 30, 0.9);
+}
+
+body.dark-theme .story-form input,
+body.dark-theme .story-form textarea {
+    background: rgba(45, 45, 45, 0.9);
+    border-color: #444;
+}
+
+body.dark-theme .cancel-btn {
+    background: #444;
+    color: #f0f0f0;
+}
+
+body.dark-theme .cancel-btn:hover {
+    background: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .story-form {
+        padding: 20px;
+        margin: 20px 10px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .submit-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+} 
