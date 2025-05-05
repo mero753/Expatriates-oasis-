@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychological Assessment - Expatriates' Oasis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mental-health.css">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --primary-color-rgb: 74, 144, 226;
+            --secondary-color: #357abd;
+            --background-color: #ffffff;
+            --card-background-color: #ffffff;
+            --text-color: #333333;
+        }
+
+        body.dark-theme {
+            --background-color: #1a1a1a;
+            --card-background-color: #2d2d2d;
+            --text-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo" id="mainLogo">Expatriates' Oasis</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#about">About</a>
+        </nav>
+        <div class="auth-buttons" id="authButtons">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="register.html" class="register-btn">Register</a>
+        </div>
+        <div class="user-profile" id="userProfile" style="display: none;">
+            <span id="userName"></span>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+        <div class="nav-controls">
+            <button id="themeToggle" class="theme-toggle">🌓</button>
+        </div>
+    </header>
+
+    <main class="mental-health-container">
+        <div class="assessment-header">
+            <h1>Psychological Assessment</h1>
+            <p>This assessment will help you better understand your mental state</p>
+        </div>
+
+        <div class="assessment-form">
+            <div class="symptoms-list">
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom1" class="symptom-checkbox">
+                    <label for="symptom1">Recurring nightmares or painful memories</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom2" class="symptom-checkbox">
+                    <label for="symptom2">Avoiding places or people that remind you of traumatic events</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom3" class="symptom-checkbox">
+                    <label for="symptom3">Feeling constantly tense and easily frightened</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom4" class="symptom-checkbox">
+                    <label for="symptom4">Emotional numbness or detachment from others</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom5" class="symptom-checkbox">
+                    <label for="symptom5">Persistent sadness or feelings of hopelessness</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom6" class="symptom-checkbox">
+                    <label for="symptom6">Loss of interest in activities you once enjoyed</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom7" class="symptom-checkbox">
+                    <label for="symptom7">Fatigue or difficulty concentrating</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom8" class="symptom-checkbox">
+                    <label for="symptom8">Thoughts of death or suicide</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom9" class="symptom-checkbox">
+                    <label for="symptom9">Excessive worry that's difficult to control</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom10" class="symptom-checkbox">
+                    <label for="symptom10">Tension, irritability, or muscle tension</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom11" class="symptom-checkbox">
+                    <label for="symptom11">Panic attacks (sudden fear, rapid heartbeat, sweating, trembling)</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom12" class="symptom-checkbox">
+                    <label for="symptom12">Difficulty sleeping due to anxiety</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom13" class="symptom-checkbox">
+                    <label for="symptom13">Intense longing for lost loved ones</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom14" class="symptom-checkbox">
+                    <label for="symptom14">Difficulty accepting loss</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom15" class="symptom-checkbox">
+                    <label for="symptom15">Feeling that life has no meaning</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom16" class="symptom-checkbox">
+                    <label for="symptom16">Difficulty adapting to a new country/culture</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom17" class="symptom-checkbox">
+                    <label for="symptom17">Feeling overwhelmed by daily life</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom18" class="symptom-checkbox">
+                    <label for="symptom18">Mood swings or anger outbursts</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom19" class="symptom-checkbox">
+                    <label for="symptom19">Headaches, stomach aches, or unexplained physical pain</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom20" class="symptom-checkbox">
+                    <label for="symptom20">Using alcohol/drugs to cope with stress</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom21" class="symptom-checkbox">
+                    <label for="symptom21">Hearing voices or seeing things others don't</label>
+                </div>
+                <div class="symptom-item">
+                    <input type="checkbox" id="symptom22" class="symptom-checkbox">
+                    <label for="symptom22">Strong irrational beliefs</label>
+                </div>
+            </div>
+
+            <button id="submitAssessment" class="submit-assessment-btn">Analyze Results</button>
+        </div>
+
+        <div id="resultsModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Assessment Results</h2>
+                <div id="assessmentResults"></div>
+                <div class="recommendations">
+                    <h3>Recommendations</h3>
+                    <p>These results are only an initial indicator and do not constitute a medical diagnosis. We recommend consulting with a mental health professional for a comprehensive assessment.</p>
+                    <div class="emergency-contact">
+                        <h4>For Emergencies:</h4>
+                        <p>If you are experiencing suicidal thoughts or psychotic symptoms, please contact local emergency services immediately.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Expatriates' Oasis. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/mental-health.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var logo = document.getElementById('mainLogo');
+        if (logo) {
+            if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '/index.html') {
+                logo.addEventListener('click', function(e) {
+                    e.preventDefault();
+                });
+            }
+        }
+    });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expatriates' Oasis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="/" class="logo">Expatriates' Oasis</a>
+        <nav class="nav-links">
+            <a href="#hero" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+        </nav>
+        <div class="auth-buttons" id="authButtons">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="register.html" class="register-btn">Register</a>
+        </div>
+        <div class="user-profile" id="userProfile" style="display: none;">
+            <div class="user-welcome">
+                <i class="fas fa-user-circle"></i>
+                <span id="userName">Welcome</span>
+            </div>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+        <div class="nav-controls">
+            <button id="themeToggle" class="theme-toggle">🌓</button>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to Your Oasis</h1>
+                <p>Providing psychological support and guidance for expatriates worldwide</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <a href="mental-health.html" class="service-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Psychological Assessment</h3>
+                        <p>Comprehensive psychological assessment to help you understand your mental state</p>
+                    </a>
+                    <a href="support-organizations.html" class="service-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Support Organizations</h3>
+                        <p>Find support organizations in your country and connect with them easily.</p>
+                    </a>
+                    <a href="stories.html" class="service-card">
+                        <i class="fas fa-book-open"></i>
+                        <h3>Inspiring Stories</h3>
+                        <p>Inspiring success stories from expatriates around the world</p>
+                        <span class="service-link">Read Stories</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Expat Oasis is a platform dedicated to providing psychological and social support for expatriates worldwide. We believe that mental health is the foundation of success and adaptation in any new environment.</p>
+                <ul>
+                    <li>24/7 Psychological Support</li>
+                    <li>Comprehensive Mental Health Assessment</li>
+                    <li>Local Support Organizations</li>
+                    <li>Inspiring Success Stories</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Expatriates' Oasis. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

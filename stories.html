@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiring Stories - Expatriates' Oasis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stories.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="/" class="logo">Expatriates' Oasis</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#about">About</a>
+        </nav>
+        <div class="auth-buttons" id="authButtons">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="register.html" class="register-btn">Register</a>
+        </div>
+        <div class="user-profile" id="userProfile" style="display: none;">
+            <span id="userName"></span>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+        <div class="nav-controls">
+            <button id="themeToggle" class="theme-toggle">🌓</button>
+        </div>
+    </header>
+
+    <main class="stories-container">
+        <div class="stories-header">
+            <h1>Inspiring Stories</h1>
+            <p>Success stories and challenges from expatriates around the world</p>
+            <button id="addStoryBtn" class="add-story-btn">
+                <i class="fas fa-plus"></i>
+                Add Your Story
+            </button>
+        </div>
+
+        <!-- New Story Form -->
+        <div id="storyForm" class="story-form" style="display: none;">
+            <form id="newStoryForm" onsubmit="submitStory(event)">
+                <div class="form-group">
+                    <label for="storyName">Name</label>
+                    <input type="text" id="storyName" required>
+                </div>
+                <div class="form-group">
+                    <label for="storyCountry">Country of Origin → Country of Residence</label>
+                    <input type="text" id="storyCountry" required>
+                </div>
+                <div class="form-group">
+                    <label for="storyBackground">Background</label>
+                    <textarea id="storyBackground" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="storyMigration">Migration</label>
+                    <textarea id="storyMigration" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="storySuccess">Success</label>
+                    <textarea id="storySuccess" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="storyLink">Additional Link (Optional)</label>
+                    <input type="url" id="storyLink">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="submit-btn">Publish Story</button>
+                    <button type="button" onclick="hideStoryForm()" class="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="stories-grid">
+            <!-- Ilhan Omar -->
+            <div class="story-card">
+                <div class="story-header">
+                    <h2>Ilhan Omar</h2>
+                    <span class="story-country">Somalia → USA</span>
+                </div>
+                <div class="story-content">
+                    <p class="story-background"><strong>Background:</strong> Born in Mogadishu (1982) during the civil war.</p>
+                    <p class="story-migration"><strong>Migration:</strong> Fled to a Kenyan refugee camp at age 8, then settled in the US in 1995.</p>
+                    <p class="story-success"><strong>Success:</strong> First Somali-American Congresswoman (2019-present).</p>
+                    <a href="https://omar.house.gov/about" target="_blank" class="story-link">Read more</a>
+                </div>
+            </div>
+
+            <!-- Rita Ora -->
+            <div class="story-card">
+                <div class="story-header">
+                    <h2>Rita Ora</h2>
+                    <span class="story-country">Kosovo → United Kingdom</span>
+                </div>
+                <div class="story-content">
+                    <p class="story-background"><strong>Background:</strong> Born in Pristina (1990) during the Yugoslav wars.</p>
+                    <p class="story-migration"><strong>Migration:</strong> Fled to London as a baby (1991).</p>
+                    <p class="story-success"><strong>Success:</strong> Global pop star and actress.</p>
+                    <a href="https://en.wikipedia.org/wiki/Rita_Ora" target="_blank" class="story-link">Read more</a>
+                </div>
+            </div>
+
+            <!-- Alek Wek -->
+            <div class="story-card">
+                <div class="story-header">
+                    <h2>Alek Wek</h2>
+                    <span class="story-country">South Sudan → United Kingdom</span>
+                </div>
+                <div class="story-content">
+                    <p class="story-background"><strong>Background:</strong> Born during the Sudanese civil war (1977).</p>
+                    <p class="story-migration"><strong>Migration:</strong> Fled to the United Kingdom at age 14 through refugee camps.</p>
+                    <p class="story-success"><strong>Success:</strong> Pioneering African fashion model.</p>
+                    <a href="https://en.wikipedia.org/wiki/Alek_Wek" target="_blank" class="story-link">Read more</a>
+                </div>
+            </div>
+
+            <!-- Ismail Ahmed -->
+            <div class="story-card">
+                <div class="story-header">
+                    <h2>Ismail Ahmed</h2>
+                    <span class="story-country">Somalia → United Kingdom</span>
+                </div>
+                <div class="story-content">
+                    <p class="story-background"><strong>Background:</strong> Born in devastated Hargeisa (1961).</p>
+                    <p class="story-migration"><strong>Migration:</strong> Lived in Ethiopian refugee camps.</p>
+                    <p class="story-success"><strong>Success:</strong> Founded World Remit (valued over $1 billion).</p>
+                    <a href="https://en.wikipedia.org/wiki/Ismail_Ahmed_(businessman)" target="_blank" class="story-link">Read more</a>
+                </div>
+            </div>
+
+            <!-- Luol Deng -->
+            <div class="story-card">
+                <div class="story-header">
+                    <h2>Luol Deng</h2>
+                    <span class="story-country">South Sudan → United Kingdom/USA</span>
+                </div>
+                <div class="story-content">
+                    <p class="story-background"><strong>Background:</strong> Born during the Sudanese civil war (1985).</p>
+                    <p class="story-migration"><strong>Migration:</strong> Escaped to Egypt, then to the United Kingdom.</p>
+                    <p class="story-success"><strong>Success:</strong> NBA star, sports diplomat.</p>
+                    <a href="https://en.wikipedia.org/wiki/Luol_Deng" target="_blank" class="story-link">Read more</a>
+                </div>
+            </div>
+
+            <!-- K'naan -->
+            <div class="story-card">
+                <div class="story-header">
+                    <h2>K'naan</h2>
+                    <span class="story-country">Somalia → Canada</span>
+                </div>
+                <div class="story-content">
+                    <p class="story-background"><strong>Background:</strong> Born in Mogadishu (1978).</p>
+                    <p class="story-migration"><strong>Migration:</strong> Escaped to Canada at age 13.</p>
+                    <p class="story-success"><strong>Success:</strong> Grammy-winning musician ("Wavin' Flag").</p>
+                    <a href="https://en.wikipedia.org/wiki/K%27naan" target="_blank" class="story-link">Read more</a>
+                </div>
+            </div>
+
+            <!-- Anousheh Ansari -->
+            <div class="story-card">
+                <div class="story-header">
+                    <h2>Anousheh Ansari</h2>
+                    <span class="story-country">Iran → United States</span>
+                </div>
+                <div class="story-content">
+                    <p class="story-background"><strong>Background:</strong> Fled the Iran-Iraq war as a teenager (1984).</p>
+                    <p class="story-migration"><strong>Migration:</strong> Escaped to the United States with her family.</p>
+                    <p class="story-success"><strong>Success:</strong> First private female astronaut, tech entrepreneur, and CEO of X Prize Foundation.</p>
+                    <a href="https://en.wikipedia.org/wiki/Anousheh_Ansari" target="_blank" class="story-link">Read more</a>
+                </div>
+            </div>
+
+            <!-- Nadia Murad -->
+            <div class="story-card">
+                <div class="story-header">
+                    <h2>Nadia Murad</h2>
+                    <span class="story-country">Iraq → Germany</span>
+                </div>
+                <div class="story-content">
+                    <p class="story-background"><strong>Background:</strong> Yazidi woman enslaved by ISIS (2014).</p>
+                    <p class="story-migration"><strong>Migration:</strong> Escaped genocide, resettled in Germany.</p>
+                    <p class="story-success"><strong>Success:</strong> Nobel Peace Prize laureate (2018), UN Goodwill Ambassador, and founder of Nadia's Initiative for survivors of genocide.</p>
+                    <a href="https://en.wikipedia.org/wiki/Nadia_Murad" target="_blank" class="story-link">Read more</a>
+                </div>
+            </div>
+
+            <!-- Hamdi Ulukaya -->
+            <div class="story-card">
+                <div class="story-header">
+                    <h2>Hamdi Ulukaya</h2>
+                    <span class="story-country">Turkey → USA</span>
+                </div>
+                <div class="story-content">
+                    <p class="story-background"><strong>Background:</strong> Born in a small village in Turkey to a Kurdish family (1972).</p>
+                    <p class="story-migration"><strong>Migration:</strong> Moved to the United States in 1994 to learn English and study business.</p>
+                    <p class="story-success"><strong>Success:</strong> Founded Chobani, one of the most successful yogurt brands in the US, and became a leading advocate for refugees and social responsibility.</p>
+                    <a href="https://en.wikipedia.org/wiki/Hamdi_Ulukaya" target="_blank" class="story-link">Read more</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Expatriates' Oasis. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/stories.js"></script>
+</body>
+</html> 

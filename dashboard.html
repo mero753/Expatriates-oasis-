@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - واحة المغتربين</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="images/avatar-placeholder.png" alt="صورة المستخدم">
+                </div>
+                <h3 id="userName">مرحباً، <span>زائر</span></h3>
+            </div>
+            <nav class="dashboard-nav">
+                <a href="#" class="active">
+                    <i class="fas fa-home"></i>
+                    الرئيسية
+                </a>
+                <a href="#">
+                    <i class="fas fa-comments"></i>
+                    المحادثة
+                </a>
+                <a href="#">
+                    <i class="fas fa-chart-line"></i>
+                    التقييم النفسي
+                </a>
+                <a href="#">
+                    <i class="fas fa-globe"></i>
+                    المنظمات
+                </a>
+            </nav>
+        </aside>
+        
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <h1>لوحة التحكم</h1>
+                <div class="header-actions">
+                    <button class="theme-toggle">🌓</button>
+                    <button class="notification-btn">🔔</button>
+                    <button class="profile-btn" onclick="logout()">تسجيل خروج</button>
+                </div>
+            </div>
+            
+            <div class="dashboard-grid">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

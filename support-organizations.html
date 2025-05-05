@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Organizations</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: var(--background-color);
+            color: var(--text-color);
+        }
+        .support-section {
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            padding: 2rem;
+            background: var(--card-background-color);
+            border-radius: 18px;
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.08);
+        }
+        .support-title {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .org-section-title {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 2.5rem 0 1.2rem 0;
+            text-align: left;
+        }
+        .org-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.5rem;
+        }
+        .org-name-card {
+            background: linear-gradient(135deg, var(--primary-color) 60%, var(--secondary-color) 100%);
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: bold;
+            border-radius: 14px;
+            box-shadow: 0 2px 10px rgba(44,62,80,0.10);
+            padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+            text-align: left;
+            letter-spacing: 0.5px;
+            transition: box-shadow 0.2s, transform 0.2s, background 0.3s;
+            border: none;
+            direction: rtl;
+        }
+        .org-name-card:hover {
+            background: linear-gradient(135deg, var(--secondary-color) 60%, var(--primary-color) 100%);
+            box-shadow: 0 6px 24px rgba(44,62,80,0.18);
+            transform: translateY(-4px) scale(1.04);
+        }
+        .org-desc {
+            font-size: 1rem;
+            font-weight: normal;
+            color: #f3f3f3;
+            margin-top: 0.5rem;
+            text-align: left;
+            direction: rtl;
+        }
+        @media (max-width: 600px) {
+            .support-section { padding: 0.7rem; }
+            .org-list { grid-template-columns: 1fr; }
+        }
+        body.dark-theme .org-name-card {
+            background: linear-gradient(135deg, #232b5c 60%, #3949ab 100%);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="support-section">
+        <div class="support-title">Support Organizations for Refugees and Emergencies</div>
+        <div class="org-section-title">Major International Organizations</div>
+        <div class="org-list org-names-list">
+            <div class="org-name-card">UNHCR
+                <div class="org-desc">The United Nations Refugee Agency provides protection and assistance to refugees worldwide.</div>
+            </div>
+            <div class="org-name-card">ICRC
+                <div class="org-desc">The International Committee of the Red Cross offers humanitarian help in conflict zones and emergencies.</div>
+            </div>
+            <div class="org-name-card">UNICEF
+                <div class="org-desc">The United Nations Children's Fund supports children and families in crisis situations.</div>
+            </div>
+            <div class="org-name-card">MSF
+                <div class="org-desc">Médecins Sans Frontières (Doctors Without Borders) delivers medical care in emergencies.</div>
+            </div>
+            <div class="org-name-card">IRC
+                <div class="org-desc">The International Rescue Committee helps people affected by humanitarian crises to survive and rebuild.</div>
+            </div>
+            <div class="org-name-card">CARE International
+                <div class="org-desc">CARE International fights global poverty and provides disaster relief.</div>
+            </div>
+            <div class="org-name-card">Save the Children
+                <div class="org-desc">Save the Children works to improve the lives of children in need around the world.</div>
+            </div>
+            <div class="org-name-card">HIAS
+                <div class="org-desc">HIAS supports refugees and asylum seekers with protection and advocacy.</div>
+            </div>
+            <div class="org-name-card">Médecins du Monde
+                <div class="org-desc">Doctors of the World provides medical care to vulnerable populations.</div>
+            </div>
+        </div>
+        <div class="org-section-title">Additional Global Organizations</div>
+        <div class="org-list org-names-list">
+            <div class="org-name-card">Refugees International
+                <div class="org-desc">Refugees International advocates for lifesaving assistance and protection for displaced people.</div>
+            </div>
+            <div class="org-name-card">IOM
+                <div class="org-desc">The International Organization for Migration promotes humane and orderly migration for all.</div>
+            </div>
+            <div class="org-name-card">Global Refuge (LIRS)
+                <div class="org-desc">Global Refuge (formerly LIRS) supports refugees and migrants in rebuilding their lives.</div>
+            </div>
+            <div class="org-name-card">UNRWA
+                <div class="org-desc">The United Nations Relief and Works Agency provides support to Palestinian refugees.</div>
+            </div>
+            <div class="org-name-card">Danish Refugee Council (DRC)
+                <div class="org-desc">The Danish Refugee Council assists refugees and internally displaced persons worldwide.</div>
+            </div>
+            <div class="org-name-card">IRAP
+                <div class="org-desc">The International Refugee Assistance Project provides legal aid to refugees and displaced people.</div>
+            </div>
+            <div class="org-name-card">ACTED
+                <div class="org-desc">ACTED delivers humanitarian aid and supports sustainable development in crisis areas.</div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:2.5rem;">
+            <a href="index.html" class="primary-btn" style="padding:0.7rem 2.5rem; font-size:1.1rem;">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychological Assessment Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mental-health.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #4a90e2 0%, #23242a 100%);
+            min-height: 100vh;
+        }
+        .result-page-container {
+            max-width: 900px;
+            margin: 5vh auto 5vh auto;
+            padding: 2.5rem 2rem;
+            background: #23242a;
+            border-radius: 32px 32px 32px 8px;
+            box-shadow: 0 8px 40px 0 rgba(0,0,0,0.25), 0 1.5px 8px 0 rgba(74,144,226,0.10);
+            min-height: 350px;
+            color: #fff;
+            border: 2.5px solid var(--primary-color);
+            position: relative;
+            animation: bubbleIn 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes bubbleIn {
+            0% { transform: scale(0.8) translateY(60px); opacity: 0; }
+            100% { transform: scale(1) translateY(0); opacity: 1; }
+        }
+        .result-title {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .result-summary {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            background: #222b3a;
+            border-radius: 18px;
+            padding: 1.5rem 1rem;
+            color: #fff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+        .treatment-plan {
+            margin-top: 2.5rem;
+            background: #1a1a1a;
+            border-radius: 18px;
+            padding: 2rem 1.2rem;
+            color: #fff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+        .treatment-plan h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+        .treatment-module h4 {
+            color: var(--secondary-color);
+            font-size: 1.15rem;
+            margin-bottom: 0.7rem;
+        }
+        .treatment-module ul {
+            margin-bottom: 1.2rem;
+            padding-right: 1.2rem;
+        }
+        .treatment-module li {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        @media (max-width: 768px) {
+            .result-page-container {
+                padding: 1.2rem 0.5rem;
+            }
+            .result-title {
+                font-size: 1.3rem;
+            }
+            .result-summary {
+                font-size: 1rem;
+                padding: 1rem 0.5rem;
+            }
+            .treatment-plan {
+                padding: 1.2rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="result-page-container">
+        <div class="result-title">Psychological Assessment Result</div>
+        <div id="resultSummary" class="result-summary"></div>
+        <div id="treatmentPlan" class="treatment-plan"></div>
+    </div>
+    <script src="js/assessment-result.js"></script>
+</body>
+</html> 
